@@ -90,6 +90,10 @@ p {
 .prose p {
 	margin-bottom: 2em;
 }
+.prose p + ul,
+.prose p + ol {
+	margin-top: -1.5em;
+}
 textarea {
 	width: 100%;
 	font-size: 16px;
