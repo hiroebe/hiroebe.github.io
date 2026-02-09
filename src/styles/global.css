@@ -80,9 +80,15 @@ b {
 }
 a {
 	color: var(--accent);
+	-webkit-tap-highlight-color: transparent;
 }
-a:hover {
-	color: var(--accent);
+@media (hover: hover) {
+	a:hover {
+		color: var(--accent-dark);
+	}
+}
+a:active {
+	color: var(--accent-dark);
 }
 p {
 	margin-bottom: 1em;
