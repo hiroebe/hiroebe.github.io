@@ -19,6 +19,7 @@ description: string  # required
 pubDate: YYYY-MM-DD  # required
 updatedDate: YYYY-MM-DD  # optional
 heroImage: image path    # optional
+tags: Tag[]              # optional, defined in src/consts.ts
 ```
 
 ## Custom skills

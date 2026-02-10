@@ -2,6 +2,7 @@
 title: '個人ブログの技術構成'
 description: 'Astro + GitHub Pages で個人ブログを構築し、Claude Code の Skill で執筆補助を自動化した話。'
 pubDate: 2026-02-10
+tags: ['tech']
 ---
 
 [個人ブログを作った](/blog/started-personal-blog/) ということで、ブログの技術構成について書いておく。

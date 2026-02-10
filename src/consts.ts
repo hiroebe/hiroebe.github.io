@@ -3,3 +3,11 @@
 
 export const SITE_TITLE = 'hiroebe.net';
 export const SITE_DESCRIPTION = 'hiroebe のブログ';
+
+export const TAGS = {
+	tech: 'tech',
+	random: 'random',
+	albirex: 'アルビレックス新潟',
+} as const;
+
+export type Tag = keyof typeof TAGS;
