@@ -10,11 +10,15 @@ import { TAGS } from '../consts';
 type Props = CollectionEntry<'blog'>['data'];
 
 const { title, description, pubDate, updatedDate, heroImage, tags } = Astro.props;
+
+const segments = Astro.url.pathname.split('/').filter(Boolean);
+const isBlogPost = segments[0] === 'blog' && segments.length >= 2;
+const ogImage = isBlogPost ? `/og/${segments[1]}.png` : undefined;
 ---
 
 <html lang="ja">
 	<head>
-		<BaseHead title={title} description={description} />
+		<BaseHead title={title} description={description} ogImage={ogImage} />
 		<style>
 			main {
 				width: calc(100% - 2em);
