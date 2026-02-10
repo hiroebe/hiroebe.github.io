@@ -30,6 +30,10 @@
 	font-style: normal;
 	font-display: swap;
 }
+html,
+body {
+  height: 100%;
+}
 body {
 	font-family: "Atkinson", sans-serif;
 	margin: 0;
