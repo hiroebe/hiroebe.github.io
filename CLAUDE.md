@@ -20,6 +20,7 @@ pubDate: YYYY-MM-DD  # required
 updatedDate: YYYY-MM-DD  # optional
 heroImage: image path    # optional
 tags: Tag[]              # optional, defined in src/consts.ts
+order: number            # optional, sort tiebreaker for same date (lower = earlier)
 ```
 
 ## Custom skills

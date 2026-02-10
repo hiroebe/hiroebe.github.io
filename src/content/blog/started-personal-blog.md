@@ -3,6 +3,7 @@ title: '個人ブログを作った'
 description: '備忘録と発信を兼ねて個人ブログを始めた話'
 pubDate: 2026-02-10
 tags: ['random']
+order: 1
 ---
 
 ふと思い立って個人ブログを作った。

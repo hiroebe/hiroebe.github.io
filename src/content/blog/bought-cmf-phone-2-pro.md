@@ -3,6 +3,7 @@ title: 'CMF Phone 2 Pro を買った'
 description: 'Pixel 7 からの買い替えで CMF Phone 2 Pro を購入。デザインの良さと価格の安さを活かしてケースなし裸運用を始めた感想。'
 pubDate: 2026-02-10
 tags: ['random']
+order: 3
 ---
 
 買った。
