@@ -1,0 +1,42 @@
+---
+import type { Tag } from '../consts';
+import { TAGS } from '../consts';
+
+interface Props {
+	tags: Tag[];
+}
+
+const { tags } = Astro.props;
+---
+
+<div class="tags">
+	{tags.map((tag) => (
+		<a href={`/tags/${tag}/`} class="tag">{TAGS[tag]}</a>
+	))}
+</div>
+
+<style>
+	.tags {
+		display: inline-flex;
+		gap: 0.5em;
+	}
+	.tag {
+		font-size: 0.875em;
+		line-height: 1.4;
+		padding: 0.25em 0.75em;
+		border: 1px solid rgb(var(--gray-light));
+		border-radius: 1em;
+		color: rgb(var(--gray));
+		text-decoration: none;
+	}
+	@media (hover: hover) {
+		.tag:hover {
+			color: var(--accent);
+			border-color: var(--accent);
+		}
+	}
+	.tag:active {
+		color: var(--accent);
+		border-color: var(--accent);
+	}
+</style>
