@@ -1,11 +1,30 @@
 ---
 import Layout from '../layouts/BlogPost.astro';
+import { Content } from '../content/about.md';
 ---
+
+<style>
+	.profile {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
+	.profile img {
+		border-radius: 50%;
+	}
+	.name {
+		font-size: 1.5rem;
+		font-weight: bold;
+	}
+</style>
 
 <Layout
 	title="About"
 	description="hiroebe について"
-	pubDate={new Date('2025-02-10')}
 >
-	<p>hiroebe のブログです。</p>
+	<div class="profile">
+		<img src="/avatar.png" alt="avatar" width="128" height="128" />
+		<span class="name">hiroebe</span>
+	</div>
+	<Content />
 </Layout>
