@@ -15,8 +15,10 @@ Create a new blog post file at `src/content/blog/` with the following rules:
    title: '$ARGUMENTS'
    description: ''
    pubDate: <today's date in YYYY-MM-DD>
+   tags: []
    ---
    ```
+   Available tags are defined in `src/consts.ts`. Pick the most appropriate tag(s) based on the title. If unsure, ask the user.
 
 3. **Body**: Leave empty (the user will write the content).
 

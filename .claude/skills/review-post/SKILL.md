@@ -12,5 +12,6 @@ Check the following and report any issues:
 1. **Typos**: Kanji misconversions, typos, okurigana errors, etc.
 2. **Overall structure**: Whether the flow of text is natural and paragraph breaks are appropriate
 3. **Proper noun spelling**: Whether service/product names use their official spelling (e.g. GitHub, Claude Code, ChatGPT, JavaScript, TypeScript, Astro, VS Code, etc.)
+4. **Tags**: Read `src/consts.ts` to get the available tags, then check if the post's `tags` frontmatter is set and appropriate for the content. Flag if tags are missing or if a more suitable tag exists.
 
 List all issues found with suggested fixes.
