@@ -1,6 +1,6 @@
 ---
 title: '愛媛 vs 新潟 感想'
-description: 'J2第1節・愛媛vs新潟の感想。内容は押されっぱなしだったが、守護神バウマンの活躍で勝利。'
+description: '明治安田Ｊ２・Ｊ３百年構想リーグ 第1節 愛媛vs新潟の感想。'
 pubDate: 2026-02-10
 tags: ['albirex']
 order: 4
