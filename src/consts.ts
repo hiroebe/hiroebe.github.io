@@ -8,6 +8,7 @@ export const TAGS = {
 	tech: 'tech',
 	random: 'random',
 	albirex: 'アルビレックス新潟',
+	bonsaisns: 'Bonsai SNS',
 } as const;
 
 export type Tag = keyof typeof TAGS;
