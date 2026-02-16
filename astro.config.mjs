@@ -20,7 +20,11 @@ export default defineConfig({
 		sitemap(),
 	],
 	markdown: {
-		remarkPlugins: [remarkLinkCardPlus],
+		remarkPlugins: [
+			// Some sites (e.g. engineering.mercari.com) block OGP extraction on CI.
+			// For those links, inline the card HTML in the markdown and cache the favicon locally.
+			[remarkLinkCardPlus, { cache: true }],
+		],
 		syntaxHighlight: {
 			type: 'shiki',
 			excludeLangs: ['d2'],

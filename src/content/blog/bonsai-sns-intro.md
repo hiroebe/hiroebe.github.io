@@ -35,7 +35,21 @@ GraphQL のスタイルに乗ることでフロントエンドの実装が楽に
 
 このあたりの話は以下の記事に詳しくまとまっていて、これを読んで実践してみたくなったので採用したみたいなところがある。
 
-https://engineering.mercari.com/blog/entry/20221215-graphql-client-architecture-recommendation/
+<!-- Links to engineering.mercari.com cannot be extracted on CI; inlined locally with favicon cached -->
+<div class="remark-link-card-plus__container">
+  <a href="https://engineering.mercari.com/blog/entry/20221215-graphql-client-architecture-recommendation/" target="_blank" rel="noreferrer noopener" class="remark-link-card-plus__card">
+    <div class="remark-link-card-plus__main">
+      <div class="remark-link-card-plus__content">
+        <div class="remark-link-card-plus__title">GraphQL Client Architecture Recommendation 社外版</div>
+        <div class="remark-link-card-plus__description">この記事は、Merpay Advent Calendar 2022 の15日目の記事です。こんにちは。メルペイのvvakameです。最近、社内向けにGraphQL Client Architecture Recommendationというド</div>
+      </div>
+      <div class="remark-link-card-plus__meta">
+        <img src="/remark-link-card-plus/96c8cbea32f8b01671d68c121d9a28017eca48f1911cb3f45ed30848b1186b79.ico" class="remark-link-card-plus__favicon" width="14" height="14" alt="">
+        <span class="remark-link-card-plus__url">engineering.mercari.com</span>
+      </div>
+    </div>
+  </a>
+</div>
 
 ### Why Connect?
 
