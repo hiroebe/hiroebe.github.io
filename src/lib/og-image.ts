@@ -47,8 +47,6 @@ export async function generateOgImage(title: string): Promise<Buffer> {
 					display: 'flex',
 					flexDirection: 'column',
 					backgroundColor: '#ffffff',
-					alignItems: 'center',
-					justifyContent: 'space-between',
 					padding: '48px',
 					border: '48px solid #2337ff',
 					fontFamily: 'Noto Sans JP',
@@ -58,11 +56,16 @@ export async function generateOgImage(title: string): Promise<Buffer> {
 						type: 'div',
 						props: {
 							style: {
-								padding: '120px 48px',
+								display: 'flex',
+								flex: 1,
+								alignItems: 'center',
+								justifyContent: 'center',
+								padding: '0 48px',
 								fontSize: '60px',
 								fontWeight: 700,
 								color: '#1c1917',
 								lineHeight: 1.4,
+								textAlign: 'center',
 							},
 							children: title,
 						},
@@ -73,6 +76,7 @@ export async function generateOgImage(title: string): Promise<Buffer> {
 							style: {
 								display: 'flex',
 								alignItems: 'center',
+								justifyContent: 'center',
 								gap: '16px',
 							},
 							children: [
