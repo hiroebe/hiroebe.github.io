@@ -3,10 +3,10 @@ import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
 ---
 
-<header>
-	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
-		<div class="internal-links">
+<header class="px-4 bg-base-300 shadow-lg">
+	<nav class="flex items-center justify-between">
+		<h2 class="text-xl font-bold"><a href="/">{SITE_TITLE}</a></h2>
+		<div class="flex items-center gap-4">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog/">Blog</HeaderLink>
 			<HeaderLink href="/about/">About</HeaderLink>
@@ -14,34 +14,11 @@ import HeaderLink from './HeaderLink.astro';
 	</nav>
 </header>
 <style>
-	header {
-		margin: 0;
-		padding: 0 1em;
-		background: rgb(var(--gray-light));
-		box-shadow: 0 2px 8px rgba(var(--black), 5%);
-	}
-	h2 {
-		margin: 0;
-		font-size: 1em;
-	}
-
-	h2 a,
-	h2 a.active {
-		text-decoration: none;
-	}
-	nav {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-	}
 	nav a {
-		padding: 1em 0.5em;
-		color: var(--black);
+		padding-block: 1em;
 		border-bottom: 4px solid transparent;
-		text-decoration: none;
 	}
 	nav a.active {
-		text-decoration: none;
-		border-bottom-color: var(--accent);
+		border-bottom-color: var(--color-primary);
 	}
 </style>

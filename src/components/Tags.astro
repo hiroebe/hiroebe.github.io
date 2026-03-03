@@ -9,34 +9,8 @@ interface Props {
 const { tags } = Astro.props;
 ---
 
-<div class="tags">
+<div class="inline-flex gap-2">
 	{tags.map((tag) => (
-		<a href={`/tags/${tag}/`} class="tag">{TAGS[tag]}</a>
+		<a href={`/tags/${tag}/`} class="badge badge-outline">{TAGS[tag]}</a>
 	))}
 </div>
-
-<style>
-	.tags {
-		display: inline-flex;
-		gap: 0.5em;
-	}
-	.tag {
-		font-size: 0.875em;
-		line-height: 1.4;
-		padding: 0.25em 0.75em;
-		border: 1px solid rgb(var(--gray-light));
-		border-radius: 1em;
-		color: rgb(var(--gray));
-		text-decoration: none;
-	}
-	@media (hover: hover) {
-		.tag:hover {
-			color: var(--accent);
-			border-color: var(--accent);
-		}
-	}
-	.tag:active {
-		color: var(--accent);
-		border-color: var(--accent);
-	}
-</style>

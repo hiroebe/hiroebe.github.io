@@ -6,9 +6,12 @@ import astroD2 from 'astro-d2';
 import { defineConfig } from 'astro/config';
 import remarkLinkCardPlus from 'remark-link-card-plus';
 
+import tailwindcss from '@tailwindcss/vite';
+
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://hiroebe.net',
+
 	integrations: [
 		astroD2({
 			layout: 'elk',
@@ -19,6 +22,7 @@ export default defineConfig({
 		mdx(),
 		sitemap(),
 	],
+
 	markdown: {
 		remarkPlugins: [
 			// Some sites (e.g. engineering.mercari.com) block OGP extraction on CI.
@@ -29,5 +33,9 @@ export default defineConfig({
 			type: 'shiki',
 			excludeLangs: ['d2'],
 		},
+	},
+
+	vite: {
+		plugins: [tailwindcss()],
 	},
 });

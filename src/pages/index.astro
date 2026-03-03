@@ -2,9 +2,8 @@
 import { getCollection } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
-import FormattedDate from '../components/FormattedDate.astro';
+import Article from '../components/Article.astro';
 import Header from '../components/Header.astro';
-import Tags from '../components/Tags.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 const posts = (await getCollection('blog'))
@@ -20,99 +19,29 @@ const posts = (await getCollection('blog'))
 <html lang="ja">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-		<style>
-			.profile {
-				display: flex;
-				align-items: center;
-				gap: 1rem;
-				margin-bottom: 1rem;
-			}
-			.profile img {
-				border-radius: 50%;
-			}
-			.profile a {
-				font-size: 1.5rem;
-				font-weight: bold;
-				text-decoration: none;
-				color: rgb(var(--black));
-			}
-			@media (hover: hover) {
-				.profile a:hover {
-					color: var(--accent);
-				}
-			}
-			.profile a:active {
-				color: var(--accent);
-			}
-			.section-title {
-				font-size: 1.25rem;
-				margin: 2.5rem 0 1.5rem 0;
-			}
-			.posts {
-				list-style: none;
-				padding: 0;
-				margin: 0;
-				display: flex;
-				flex-direction: column;
-				gap: 2rem;
-			}
-			.posts li a {
-				text-decoration: none;
-			}
-			.post-title {
-				margin: 0 0 0.25em 0;
-				color: rgb(var(--black));
-				line-height: 1.3;
-				text-wrap: balance;
-			}
-			.post-date {
-				margin: 0.25em 0 0 0;
-				color: rgb(var(--gray));
-				font-size: 0.875rem;
-			}
-			@media (hover: hover) {
-				.posts li a:hover .post-title,
-				.posts li a:hover .post-date {
-					color: rgb(var(--accent));
-				}
-			}
-			.posts li a:active .post-title,
-			.posts li a:active .post-date {
-				color: rgb(var(--accent));
-			}
-			.more {
-				margin-top: 1rem;
-			}
-		</style>
 	</head>
 	<body>
 		<Header />
 		<main>
-			<div class="profile">
-				<img src="/avatar.png" alt="avatar" width="96" height="96" />
-				<a href="/about/">hiroebe</a>
+			<div class="flex items-center gap-4 mb-8">
+				<div class="avatar">
+					<img src="/avatar.png" class="w-24 rounded-full" />
+				</div>
+				<a class="text-3xl font-bold" href="/about/">hiroebe</a>
 			</div>
-			<hr />
+			<div class="divider" />
 			<section>
-				<h2 class="section-title">最近の記事</h2>
-				<ul class="posts">
+				<h2 class="text-2xl mt-10 mb-6">最近の記事</h2>
+				<div class="flex flex-col gap-6">
 					{
 						posts.map((post) => (
-							<li>
-								<a href={`/blog/${post.id}/`}>
-									<h4 class="post-title">{post.data.title}</h4>
-								</a>
-								{post.data.tags && post.data.tags.length > 0 && (
-									<Tags tags={post.data.tags} />
-								)}
-								<p class="post-date">
-									<FormattedDate date={post.data.pubDate} />
-								</p>
-							</li>
+							<Article id={post.id} post={post.data} />
 						))
 					}
-				</ul>
-				<p class="more"><a href="/blog/">すべての記事を見る →</a></p>
+				</div>
+				<p class="mt-8">
+					<a href="/blog/">すべての記事を見る →</a>
+				</p>
 			</section>
 		</main>
 		<Footer />

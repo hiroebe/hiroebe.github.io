@@ -1,15 +1,15 @@
 ---
-import { Image } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import Tags from '../components/Tags.astro';
+import type { Tag } from '../consts';
 
-type Props = Omit<CollectionEntry<'blog'>['data'], 'pubDate'> & { pubDate?: Date };
+type Props = Omit<Omit<CollectionEntry<'blog'>['data'], 'pubDate'>, 'tags'> & { pubDate?: Date, tags?: Tag[] };
 
-const { title, description, pubDate, updatedDate, heroImage, tags } = Astro.props;
+const { title, description, pubDate, updatedDate, tags } = Astro.props;
 
 const segments = Astro.url.pathname.split('/').filter(Boolean);
 const isBlogPost = segments[0] === 'blog' && segments.length >= 2;
@@ -19,73 +19,30 @@ const ogImage = isBlogPost ? `/og/${segments[1]}.png` : undefined;
 <html lang="ja">
 	<head>
 		<BaseHead title={title} description={description} ogImage={ogImage} />
-		<style>
-			main {
-				width: calc(100% - 2em);
-				max-width: 100%;
-				margin: 0;
-			}
-			.hero-image {
-				width: 100%;
-			}
-			.hero-image img {
-				display: block;
-				margin: 0 auto;
-				border-radius: 12px;
-				box-shadow: var(--box-shadow);
-			}
-			.prose {
-				width: 720px;
-				max-width: calc(100% - 2em);
-				margin: auto;
-				padding: 1em;
-				color: rgb(var(--gray-dark));
-			}
-			.title {
-				margin-bottom: 1em;
-				padding: 1em 0;
-				text-align: center;
-				line-height: 1;
-			}
-			.title h1 {
-				margin: 0 0 0.5em 0;
-				text-wrap: balance;
-			}
-			.date {
-				margin-bottom: 0.5em;
-				color: rgb(var(--gray));
-			}
-			.last-updated-on {
-				font-style: italic;
-			}
-		</style>
 	</head>
 
 	<body>
 		<Header />
 		<main>
 			<article>
-				<div class="hero-image">
-					{heroImage && <Image width={1020} height={510} src={heroImage} alt="" />}
-				</div>
-				<div class="prose">
-					<div class="title">
+					<div class="flex flex-col items-center gap-4 mb-4">
 						{pubDate && (
-							<div class="date">
+						<div class="text-base-content/50">
 								<FormattedDate date={pubDate} />
 								{
 									updatedDate && (
-										<div class="last-updated-on">
+									<div class="text-base-content/50">
 											Last updated on <FormattedDate date={updatedDate} />
 										</div>
 									)
 								}
 							</div>
 						)}
-						<h1>{title}</h1>
+						<h1 class="text-2xl text-center text-pretty">{title}</h1>
 						{tags && tags.length > 0 && <Tags tags={tags} />}
-						<hr />
+						<div class="divider" />
 					</div>
+				<div class="prose mx-auto">
 					<slot />
 				</div>
 			</article>

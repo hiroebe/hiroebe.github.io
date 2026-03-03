@@ -1,0 +1,32 @@
+---
+import FormattedDate from '../components/FormattedDate.astro';
+import Tags from '../components/Tags.astro';
+import type { Tag } from '../consts';
+
+interface Props {
+	id: string;
+	post: {
+		title: string;
+		description: string;
+		pubDate: Date;
+		tags: Tag[];
+	}
+}
+
+const {id, post} = Astro.props;
+---
+
+<article class="card bg-base-200">
+	<div class="card-body">
+		<h3 class="card-title text-pretty">
+			<a href={`/blog/${id}/`}>
+				{post.title}
+			</a>
+		</h3>
+		<p class="text-pretty">{post.description}</p>
+		<div class="card-actions justify-between [&_time]:text-base-content/50">
+			<Tags tags={post.tags} />
+			<FormattedDate date={post.pubDate} />
+		</div>
+	</div>
+</article>
