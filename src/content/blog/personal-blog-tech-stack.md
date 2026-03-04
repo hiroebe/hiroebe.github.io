@@ -1,6 +1,6 @@
 ---
 title: '個人ブログの技術構成'
-description: 'Astro + GitHub Pages で個人ブログを構築し、Claude Code の Skill で執筆補助を自動化した話。'
+description: '個人ブログを作ったのでその技術構成について'
 pubDate: 2026-02-10
 tags: ['tech']
 order: 2

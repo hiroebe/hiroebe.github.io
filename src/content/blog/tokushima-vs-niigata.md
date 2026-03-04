@@ -1,6 +1,6 @@
 ---
 title: '徳島 vs 新潟 感想'
-description: '明治安田Ｊ２・Ｊ３百年構想リーグ 第2節 徳島vs新潟の感想。'
+description: '明治安田Ｊ２・Ｊ３百年構想リーグ 第2節 徳島vs新潟の感想'
 pubDate: 2026-02-15
 tags: ['albirex']
 ---

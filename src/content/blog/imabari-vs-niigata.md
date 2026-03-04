@@ -1,6 +1,6 @@
 ---
 title: '今治 vs 新潟 感想'
-description: '明治安田Ｊ２・Ｊ３百年構想リーグ 第4節 今治vs新潟の感想。'
+description: '明治安田Ｊ２・Ｊ３百年構想リーグ 第4節 今治vs新潟の感想'
 pubDate: 2026-03-01
 tags: ['albirex']
 order: 1

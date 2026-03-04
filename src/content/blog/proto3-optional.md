@@ -1,6 +1,6 @@
 ---
 title: 'proto3 の optional ラベルは optional なフィールドにつけるものではない'
-description: 'proto3 の optional ラベルは optional なフィールドだけにつけるのではなく、primitive 型フィールドに常につけるのが推奨という話'
+description: '誤解されがちな proto3 の optional ラベルの使い方について'
 pubDate: 2026-02-17
 tags: ['tech']
 ---

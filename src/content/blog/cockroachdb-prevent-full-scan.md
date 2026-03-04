@@ -1,6 +1,6 @@
 ---
 title: 'CockroachDB でフルスキャンを防ぐ'
-description: 'CockroachDB でセッション変数を設定し、開発中にフルスキャンになるクエリをエラーにする方法。'
+description: 'CockroachDB でフルスキャンを検出するためのアプローチを紹介'
 pubDate: 2026-03-01
 tags: ['tech', 'bonsaisns']
 order: 3
